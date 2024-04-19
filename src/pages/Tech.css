@@ -1,0 +1,41 @@
+.newsCardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+
+.newsCard {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  list-style: none;
+  border: 1px black solid;
+  width: 300px;
+  height: 350px;
+  box-sizing: border-box;
+}
+.newsCard img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+.newsCard p {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+  text-align: center;
+}
+.newsCard p a {
+  text-decoration: none;
+  color: inherit;
+}
+.NewsHeader {
+  text-align: center;
+  margin-bottom: 10vh;
+}
