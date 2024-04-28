@@ -1,17 +1,15 @@
-
 @keyframes bounce {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-5px);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
   }
-  
-  .bounce {
-    animation: bounce 0.5s infinite; 
+  50% {
+    transform: translateY(-5px);
   }
-  
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bounce {
+  animation: bounce 0.5s infinite;
+}

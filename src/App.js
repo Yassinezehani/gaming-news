@@ -9,7 +9,7 @@ import Footer from "./componet/Footer";
 import "./App.css";
 function App() {
   return (
-    <div>
+    <div className="App">
       <Navbar />
       <Router>
         <Routes>

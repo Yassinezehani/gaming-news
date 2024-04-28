@@ -9,7 +9,12 @@ function Navv() {
 
   return (
     <>
-      <Navbar bg="dark" data-bs-theme="dark" style={{ zIndex: 9999 }}>
+      <Navbar
+        bg="dark"
+        data-bs-theme="dark"
+        style={{ zIndex: 9999 }}
+        className="sticky-top"
+      >
         <Container>
           <Navbar.Brand
             href="/"

@@ -1,0 +1,13 @@
+.About {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 5%;
+}
+.About h2,
+.About h3 {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}

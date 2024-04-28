@@ -25,7 +25,7 @@ export default function Home() {
               <Card
                 src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
                 title="Gaming News"
-                description="You can find all gaming news by clicking the button below."
+                description="You can find all the new games by clicking the button below."
                 link="/news"
                 buttonText="Check Here"
               />
@@ -34,7 +34,7 @@ export default function Home() {
               <Card
                 src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
                 title="Technologie"
-                description="You can find all Technologie by clicking the button below."
+                description="You can find all the new Technologies by clicking the button below. "
                 link="/tech"
                 buttonText="Check Here"
               />
@@ -43,7 +43,7 @@ export default function Home() {
               <Card
                 src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
                 title="about"
-                description="You can find all about by clicking the button below."
+                description="You can find all about us by clicking the button below. "
                 link="/about"
                 buttonText="Check Here"
               />

@@ -6,23 +6,34 @@
   flex-wrap: wrap;
   width: 80%;
   margin: auto;
+  padding: 10vh 0;
 }
 
 .newsCard {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   list-style: none;
-  border: 1px black solid;
   width: 300px;
   height: 350px;
   box-sizing: border-box;
+  border-radius: 30px;
+  background-color: rgb(33, 37, 41);
+  box-shadow: 0 5px 15px black, inset 0 0 10px rgba(0, 0, 0, 0.856);
+  transition: all 0.3s;
+}
+.imgWrapper {
+  width: 100%;
+  height: 60%;
+  border-radius: 30px 30px 0 0;
+  overflow: hidden;
 }
 .newsCard img {
   width: 100%;
-  height: 60%;
+  height: 100%;
   object-fit: cover;
 }
-.newsCard p {
+
+.newsCard .cardTitle {
   width: 100%;
   height: 40%;
   display: flex;
@@ -31,11 +42,79 @@
   padding: 3%;
   text-align: center;
 }
-.newsCard p a {
+.newsCard .cardTitle a,
+.newsCardTitle a {
   text-decoration: none;
-  color: inherit;
+  color: white;
+}
+.newsCard .cardTitle a:hover,
+.newsCardTitle a:hover {
+  text-decoration: underline;
 }
 .NewsHeader {
   text-align: center;
-  margin-bottom: 10vh;
+}
+.loadingGif {
+  display: block;
+  height: 60vh;
+  width: auto;
+  margin: auto;
+}
+.NewsContainer,
+.TechContainer {
+  background-color: var(--bgColor);
+  min-height: 95vh;
+}
+.timing {
+  margin: auto;
+  text-align: center;
+}
+.newsCard:hover {
+  transform: translateY(-3%);
+  box-shadow: 0 10px 15px black;
+}
+.cardDetails {
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  color: white;
+  background-color: rgb(33, 37, 41);
+  border-radius: 0 0 30px 30px;
+  margin-top: -13%;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 15px black;
+  transition: all 0.3s;
+}
+.newsCard:hover .cardDetails {
+  z-index: 5;
+  opacity: 1;
+  height: unset;
+}
+.cardDetail {
+  display: flex;
+  justify-content: space-between;
+}
+.textWrapper {
+  max-width: 60%;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+.textWrapper p {
+  width: fit-content;
+}
+.textWrapper:hover .textWrapperLayer {
+  animation: marquee 15s linear infinite reverse;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  30% {
+    transform: translateX(-70%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
