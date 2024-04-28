@@ -32,7 +32,7 @@ export default function Home() {
             </div>
             <div className="col">
               <Card
-                src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
+                src="https://static.wixstatic.com/media/309d105833834f94a863c3c88cb6e00e.jpg/v1/fill/w_2500,h_1875,al_c/309d105833834f94a863c3c88cb6e00e.jpg"
                 title="Technologie"
                 description="You can find all the new Technologies by clicking the button below. "
                 link="/tech"
@@ -41,9 +41,9 @@ export default function Home() {
             </div>
             <div className="col">
               <Card
-                src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
+                src="https://www.panasonicvisualsystems.com/wp-content/uploads/2023/05/Cloud-technology-1.jpeg"
                 title="about"
-                description="You can find all about us by clicking the button below. "
+                description="You can find all about us and our purpose by clicking the button below. "
                 link="/about"
                 buttonText="Check Here"
               />

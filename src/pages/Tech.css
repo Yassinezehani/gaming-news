@@ -47,10 +47,7 @@
   text-decoration: none;
   color: white;
 }
-.newsCard .cardTitle a:hover,
-.newsCardTitle a:hover {
-  text-decoration: underline;
-}
+
 .NewsHeader {
   text-align: center;
 }

@@ -5,11 +5,11 @@ export default function Tech() {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const techAPI = process.env.REACT_APP_TECH_NEWS_KEY;
-  const date = new Date().toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  });
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const day = String(today.getDate()).padStart(2, "0");
+  const formattedDate = `${year}-${month}-${day}`;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,7 +35,7 @@ export default function Tech() {
   return (
     <div className="TechContainer">
       <h1 className="NewsHeader">Technology</h1>
-      <p className="timing">For today {date}</p>
+      <p className="timing">For today {formattedDate}</p>
       {isLoading ? (
         <img
           src="https://roamr.biz/cdn/shop/t/15/assets/loading.gif?v=24440874582008125881674212632"

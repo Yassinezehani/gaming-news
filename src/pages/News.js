@@ -18,7 +18,6 @@ export default function News() {
           `https://api.rawg.io/api/games?key=${newGamesAPI}=${formattedFirstDay},${formattedLastDay}&platforms=18,1,7`
         );
         const data = await response.json();
-        console.log(data.results);
         setArticles(data.results);
         setIsLoading(false);
       } catch (error) {
@@ -27,7 +26,7 @@ export default function News() {
     };
     fetchData();
   }, [formattedFirstDay, formattedLastDay, newGamesAPI]);
-  console.log(setArticles[2]?.dominant_color);
+
   return (
     <div className="NewsContainer">
       <h1 className="NewsHeader">New Games</h1>
@@ -63,38 +62,45 @@ export default function News() {
                   {article.name}
                 </a>
               </h3>
+
               <div className="cardDetails">
                 <hr />
-                <p className="cardDetail">
+                <div className="cardDetail">
                   Genres:
-                  <div className={article?.genres?.length > 2 && "textWrapper"}>
-                    <p className="textWrapperLayer">
-                      {article?.genres.map((item) => (
-                        <span>{item?.name}, </span>
-                      ))}
-                    </p>
-                  </div>
-                </p>
-                <hr />
-                <p className="cardDetail">
-                  Platforms:
                   <div
-                    className={article?.platforms?.length > 2 && "textWrapper"}
+                    className={
+                      article?.genres?.length > 2 ? "textWrapper" : null
+                    }
                   >
                     <p className="textWrapperLayer">
-                      {article?.platforms.map((item) => (
-                        <span>{item?.platform?.name}, </span>
+                      {article?.genres.map((item, index) => (
+                        <span key={index}>{item?.name}, </span>
                       ))}
                     </p>
                   </div>
-                </p>
+                </div>
                 <hr />
-                <p className="cardDetail">
+                <div className="cardDetail">
+                  Platforms:
+                  <div
+                    className={
+                      article?.platforms?.length > 2 ? "textWrapper" : null
+                    }
+                  >
+                    <p className="textWrapperLayer">
+                      {article?.platforms.map((item, index) => (
+                        <span key={index}>{item?.platform?.name}, </span>
+                      ))}
+                    </p>
+                  </div>
+                </div>
+                <hr />
+                <div className="cardDetail">
                   Release date:
                   <div>
                     <p>{article.released}</p>
                   </div>
-                </p>
+                </div>
               </div>
             </li>
           ))}
